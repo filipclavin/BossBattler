@@ -1,10 +1,10 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
 
-#include "AttackSkills/AttackSkills.h"
+#include "AttackSkills/AttackSkill.h"
 
 
-void UAttackSkills::CastSkill()
+void UAttackSkill::CastSkill()
 {
 	Super::CastSkill();
 	//Damage

@@ -3,14 +3,14 @@
 #pragma once
 
 #include "CoreMinimal.h"
-#include "AttackSkills/AttackSkills.h"
+#include "AttackSkills/AttackSkill.h"
 #include "FireBall.generated.h"
 
 /**
  * 
  */
 UCLASS()
-class BOSSBATTLER_API UFireBall : public UAttackSkills
+class BOSSBATTLER_API UFireBall : public UAttackSkill
 {
 	GENERATED_BODY()
 

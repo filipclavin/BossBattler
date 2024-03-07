@@ -3,14 +3,14 @@
 #pragma once
 
 #include "CoreMinimal.h"
-#include "AbilitySystem.h"
-#include "AttackSkills.generated.h"
+#include "Skill.h"
+#include "AttackSkill.generated.h"
 
 /**
  * 
  */
 UCLASS()
-class BOSSBATTLER_API UAttackSkills : public UAbilitySystem
+class BOSSBATTLER_API UAttackSkill : public USkill
 {
 	GENERATED_BODY()
 

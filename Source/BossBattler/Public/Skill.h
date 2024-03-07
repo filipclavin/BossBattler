@@ -4,7 +4,7 @@
 
 #include "CoreMinimal.h"
 #include "Components/ActorComponent.h"
-#include "AbilitySystem.generated.h"
+#include "Skill.generated.h"
 
 // Forward declaration
 class ATurnedBasedCharacter;
@@ -20,13 +20,13 @@ class ATurnedBasedCharacter;
 
 
 UCLASS( ClassGroup=(Custom), meta=(BlueprintSpawnableComponent) , Blueprintable)
-class BOSSBATTLER_API UAbilitySystem : public UActorComponent
+class BOSSBATTLER_API USkill : public UActorComponent
 {
 	GENERATED_BODY()
 
 public:	
 	
-	UAbilitySystem();
+	USkill();
 	virtual void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
 	
 protected:

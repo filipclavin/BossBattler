@@ -1,12 +1,12 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
 
-#include "AbilitySystem.h"
+#include "Skill.h"
 
 #include "Character/TurnedBasedCharacter.h"
 
 // Sets default values for this component's properties
-UAbilitySystem::UAbilitySystem()
+USkill::USkill()
 {
 	PrimaryComponentTick.bCanEverTick = true;
 	
@@ -14,7 +14,7 @@ UAbilitySystem::UAbilitySystem()
 
 
 // Called when the game starts
-void UAbilitySystem::BeginPlay()
+void USkill::BeginPlay()
 {
 	Super::BeginPlay();
 
@@ -22,7 +22,7 @@ void UAbilitySystem::BeginPlay()
 }
 
 
-void UAbilitySystem::CastSkill()
+void USkill::CastSkill()
 {
 	if (!Character) return;
 	Character->Mana -= ManaCost;
@@ -36,7 +36,7 @@ void UAbilitySystem::CastSkill()
 }
 
 
-void UAbilitySystem::TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction)
+void USkill::TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction)
 {
 	Super::TickComponent(DeltaTime, TickType, ThisTickFunction);
 
