@@ -16,26 +16,6 @@ class ATurnedBasedCharacter;
 // 	EA_DefenceSkill,
 // 	EA_SupportSkill
 // };
-USTRUCT(BlueprintType)
-struct FSkillData
-{
-	GENERATED_BODY()
-	
-	
-
-	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-	FString Name;
-
-	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-	float Damage;
-
-	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-	float ManaCost;
-
-	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-	float HeatCost;
-	
-};
 
 
 
@@ -48,23 +28,22 @@ public:
 	
 	UAbilitySystem();
 	virtual void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
-
-	float ManaCost = 20.f;
-	float RemoveHeat = 20.f;
 	
 protected:
 	virtual void BeginPlay() override;
 	
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	float ManaCost;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	float HeatCost;
 	
 	UFUNCTION(BlueprintCallable)
-	void AttackSkill(const FSkillData& Skill, float& EnemyHealth);
+	virtual void CastSkill();
 
 
 
 private:
 
 	ATurnedBasedCharacter* Character;
-
-
-		
 };

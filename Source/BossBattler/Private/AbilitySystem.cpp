@@ -22,12 +22,17 @@ void UAbilitySystem::BeginPlay()
 }
 
 
-void UAbilitySystem::AttackSkill(const FSkillData& Skill, float& EnemyHealth)
+void UAbilitySystem::CastSkill()
 {
 	if (!Character) return;
-	Character->Mana -= Skill.ManaCost;
-	Character->Heat -= Skill.HeatCost;
-	EnemyHealth -= Skill.Damage;
+	Character->Mana -= ManaCost;
+	Character->Heat -= HeatCost;
+	//EnemyHealth -= Skill.Damage;
+	if(GEngine)
+	{
+		
+		GEngine->AddOnScreenDebugMessage(-1, 15.0f, FColor::Yellow, TEXT("GrandParentClass"));
+	}
 }
 
 
